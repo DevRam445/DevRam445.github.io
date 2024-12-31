@@ -3,156 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Dev Ram's GitHub Profile</title>
-    <style>
-        /* Basic reset and styling */
-        body, html {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            overflow: hidden;
-            background-color: #111;
-            color: #fff;
-        }
-
-        .container {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            text-align: center;
-        }
-
-        h1, h2, p {
-            margin: 20px;
-            color: #fff;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-        }
-
-        .card {
-            background-color: rgba(0, 0, 0, 0.7);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-            width: 80%;
-            max-width: 900px;
-        }
-
-        .card h2 {
-            font-size: 1.8em;
-            margin-bottom: 15px;
-        }
-
-        .card p {
-            font-size: 1.2em;
-            line-height: 1.6;
-        }
-
-        .skills, .projects {
-            margin-top: 40px;
-            font-size: 1.1em;
-        }
-
-        .button {
-            display: inline-block;
-            background-color: #00ff00;
-            color: #111;
-            padding: 10px 20px;
-            border-radius: 5px;
-            text-decoration: none;
-            margin-top: 20px;
-        }
-
-        .button:hover {
-            background-color: #00cc00;
-        }
-
-        /* 3D Background */
-        .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS -->
 </head>
 <body>
-    <!-- Content Section -->
-    <div class="container">
+    <header>
         <h1>👋 Welcome to My GitHub Profile!</h1>
-        <p>Hi, I'm Dev Ram, a passionate professional building expertise in Data Analytics and Digital Marketing. I thrive at the intersection of technology and strategy, leveraging tools like SQL, R, and Tableau to turn data into actionable insights. I want to work on projects that reflect a commitment to innovation, problem-solving, and continuous learning. Let’s connect, collaborate, and create impactful solutions together! 🚀</p>
+        <p>Hi, I'm Dev Ram, a passionate professional building expertise in Data Analytics and Digital Marketing. I thrive at the intersection of technology and strategy, leveraging tools like SQL, R, and Tableau to turn data into actionable insights. Let’s connect, collaborate, and create impactful solutions together! 🚀</p>
+    </header>
 
-        <div class="card">
+    <main>
+        <section id="about-me">
             <h2>About Me</h2>
-            <p>🔭 I’m currently working as Chief Growth Officer of an agriculture and foodtech company.<br>
-               🌱 I’m currently learning Advanced Data Analytics by Google.<br>
-               👯 I’m looking to collaborate on projects that will enable me to learn and sharpen my skills.</p>
-            <p>🤔 I’m open to learning and advancing my understanding of Python, R, and SQL.<br>
-               📫 How to reach me: <a href="mailto:dr4devram@gmail.com" class="button">Email Me</a><br>
-               🎢 Fun fact: I started in Computer Science Engineering, detoured through Business Management, Operations, and Administration, built a farm, launched my own agriculture and food processing brand, mastered marketing, and now I’m back to where it all began—diving into Data Analytics and programming, ready to code my way forward. Full circle, but leveled up! 🚀</p>
+            <ul>
+                <li>🔭 I’m currently working as Chief Growth Officer of an agriculture and foodtech company</li>
+                <li>🌱 I’m currently learning Advanced Data Analytics by Google</li>
+                <li>👯 I’m looking to collaborate on projects that will enable me to learn and sharpen my skills</li>
+                <li>🤔 I’m open to learning and advancing my understanding of Python, R, and SQL</li>
+                <li>📫 How to reach me: <a href="mailto:dr4devram@gmail.com">dr4devram@gmail.com</a></li>
+                <li>🎢 Fun fact: I started in Computer Science Engineering, detoured through Business Management, Operations, and Administration, built a farm, launched my own agriculture and food processing brand, mastered marketing, and now I’m back to where it all began—diving into Data Analytics and programming, ready to code my way forward. Full circle, but leveled up! 🚀</li>
+            </ul>
+        </section>
 
-            <div class="skills">
-                <h2>🛠️ Skills & Expertise</h2>
-                <p><strong>Programming & Data Analytics:</strong> R, SQL, Python, C++, Java<br>
-                   <strong>Tools:</strong> Tableau, MS Excel<br>
-                   <strong>Techniques:</strong> Data Cleaning, Visualization, Statistical Modeling, Automation</p>
-                <p><strong>Business & Management:</strong> Business Development, Strategy & Operations, Branding, Marketing, and Growth Strategies</p>
-                <p><strong>Agriculture & Food Processing:</strong> Sustainable Farming Practices, AgriTech Innovation, Brand Development</p>
-                <p><strong>Digital Marketing:</strong> Social Media Strategy, SEO, Performance Analytics</p>
-            </div>
+        <section id="skills">
+            <h2>🛠️ Skills & Expertise</h2>
+            <h3>Programming & Data Analytics</h3>
+            <ul>
+                <li>Languages: R, SQL, Python, C++, Java</li>
+                <li>Tools: Tableau, MS Excel</li>
+                <li>Techniques: Data Cleaning, Visualization, Statistical Modeling, Automation</li>
+            </ul>
 
-            <div class="projects">
-                <h2>Projects</h2>
-                <p>Working on filling this section</p>
-            </div>
-        </div>
-    </div>
+            <h3>Business & Management</h3>
+            <ul>
+                <li>Business Development</li>
+                <li>Business Management and Administration</li>
+                <li>Business Strategy & Operations</li>
+                <li>Process Optimization</li>
+                <li>Branding, Marketing, and Growth Strategies</li>
+            </ul>
 
-    <!-- 3D Background -->
-    <div class="overlay" id="3d-background"></div>
+            <h3>Agriculture & Food Processing</h3>
+            <ul>
+                <li>Sustainable Farming Practices</li>
+                <li>AgriTech Innovation & Food Processing</li>
+                <li>Brand Development & Market Expansion</li>
+            </ul>
 
-    <!-- Include three.js for 3D elements -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script>
-        // Set up scene, camera, and renderer
-        const scene = new THREE.Scene();
-        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-        const renderer = new THREE.WebGLRenderer();
-        renderer.setSize(window.innerWidth, window.innerHeight);
-        document.getElementById('3d-background').appendChild(renderer.domElement);
+            <h3>Digital Marketing</h3>
+            <ul>
+                <li>Social Media Strategy</li>
+                <li>Search Engine Optimization (SEO)</li>
+                <li>Performance Analytics</li>
+            </ul>
+        </section>
 
-        // Create a rotating 3D Cube
-        const geometry = new THREE.BoxGeometry();
-        const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
-        const cube = new THREE.Mesh(geometry, material);
-        scene.add(cube);
+        <section id="projects">
+            <h2>Projects</h2>
+            <p>Working on filling this section.</p>
+        </section>
 
-        camera.position.z = 5;
+        <section id="connect">
+            <h2>Connect with Me</h2>
+            <p><a href="https://www.linkedin.com/in/devram" target="_blank">LinkedIn Profile</a></p>
+            <p>Thanks for visiting my profile! Feel free to reach out if you want to collaborate or just say hi. 😊</p>
+        </section>
+    </main>
 
-        // Resize handling
-        window.addEventListener('resize', () => {
-            renderer.setSize(window.innerWidth, window.innerHeight);
-            camera.aspect = window.innerWidth / window.innerHeight;
-            camera.updateProjectionMatrix();
-        });
+    <footer>
+        <p>&copy; 2024 Dev Ram. All rights reserved.</p>
+    </footer>
 
-        // Animation loop
-        function animate() {
-            requestAnimationFrame(animate);
-            cube.rotation.x += 0.01;
-            cube.rotation.y += 0.01;
-            renderer.render(scene, camera);
-        }
-
-        animate();
-    </script>
+    <!-- Optional JavaScript for interactive elements -->
+    <!-- You can add scripts here if needed -->
+    <!-- Example: 
+    <script src="script.js"></script> 
+    -->
 </body>
 </html>
