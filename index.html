@@ -4,51 +4,140 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Interactive 3D Website</title>
+    <title>Dev Ram's GitHub Profile</title>
     <style>
+        /* Basic reset and styling */
         body, html {
             margin: 0;
             padding: 0;
-            overflow: hidden;
-            height: 100%;
-            background-color: #111;
             font-family: Arial, sans-serif;
-        }
-        h1 {
-            position: absolute;
-            top: 50%;
-            left: 50%;
+            overflow: hidden;
+            background-color: #111;
             color: #fff;
-            transform: translate(-50%, -50%);
-            font-size: 3em;
+        }
+
+        .container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        h1, h2, p {
+            margin: 20px;
+            color: #fff;
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        .card {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            width: 80%;
+            max-width: 900px;
+        }
+
+        .card h2 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+
+        .skills, .projects {
+            margin-top: 40px;
+            font-size: 1.1em;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #00ff00;
+            color: #111;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 20px;
+        }
+
+        .button:hover {
+            background-color: #00cc00;
+        }
+
+        /* 3D Background */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
         }
     </style>
 </head>
 <body>
-    <h1>Welcome to the 3D Interactive Site!</h1>
+    <!-- Content Section -->
+    <div class="container">
+        <h1>👋 Welcome to My GitHub Profile!</h1>
+        <p>Hi, I'm Dev Ram, a passionate professional building expertise in Data Analytics and Digital Marketing. I thrive at the intersection of technology and strategy, leveraging tools like SQL, R, and Tableau to turn data into actionable insights. I want to work on projects that reflect a commitment to innovation, problem-solving, and continuous learning. Let’s connect, collaborate, and create impactful solutions together! 🚀</p>
 
-    <!-- Include three.js library -->
+        <div class="card">
+            <h2>About Me</h2>
+            <p>🔭 I’m currently working as Chief Growth Officer of an agriculture and foodtech company.<br>
+               🌱 I’m currently learning Advanced Data Analytics by Google.<br>
+               👯 I’m looking to collaborate on projects that will enable me to learn and sharpen my skills.</p>
+            <p>🤔 I’m open to learning and advancing my understanding of Python, R, and SQL.<br>
+               📫 How to reach me: <a href="mailto:dr4devram@gmail.com" class="button">Email Me</a><br>
+               🎢 Fun fact: I started in Computer Science Engineering, detoured through Business Management, Operations, and Administration, built a farm, launched my own agriculture and food processing brand, mastered marketing, and now I’m back to where it all began—diving into Data Analytics and programming, ready to code my way forward. Full circle, but leveled up! 🚀</p>
+
+            <div class="skills">
+                <h2>🛠️ Skills & Expertise</h2>
+                <p><strong>Programming & Data Analytics:</strong> R, SQL, Python, C++, Java<br>
+                   <strong>Tools:</strong> Tableau, MS Excel<br>
+                   <strong>Techniques:</strong> Data Cleaning, Visualization, Statistical Modeling, Automation</p>
+                <p><strong>Business & Management:</strong> Business Development, Strategy & Operations, Branding, Marketing, and Growth Strategies</p>
+                <p><strong>Agriculture & Food Processing:</strong> Sustainable Farming Practices, AgriTech Innovation, Brand Development</p>
+                <p><strong>Digital Marketing:</strong> Social Media Strategy, SEO, Performance Analytics</p>
+            </div>
+
+            <div class="projects">
+                <h2>Projects</h2>
+                <p>Working on filling this section</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3D Background -->
+    <div class="overlay" id="3d-background"></div>
+
+    <!-- Include three.js for 3D elements -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-
     <script>
-        // Scene setup
+        // Set up scene, camera, and renderer
         const scene = new THREE.Scene();
         const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
         const renderer = new THREE.WebGLRenderer();
         renderer.setSize(window.innerWidth, window.innerHeight);
-        document.body.appendChild(renderer.domElement);
+        document.getElementById('3d-background').appendChild(renderer.domElement);
 
-        // Create a cube geometry
+        // Create a rotating 3D Cube
         const geometry = new THREE.BoxGeometry();
         const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
         const cube = new THREE.Mesh(geometry, material);
         scene.add(cube);
 
-        // Position the camera
         camera.position.z = 5;
 
-        // Handle window resizing
+        // Resize handling
         window.addEventListener('resize', () => {
             renderer.setSize(window.innerWidth, window.innerHeight);
             camera.aspect = window.innerWidth / window.innerHeight;
